@@ -2,7 +2,7 @@ from datetime import datetime
 
 
 def checkChanges(historyTable):
-    changesTable = historyTable[6]
+    changesTable = historyTable[4]
     changesTrs = changesTable.find_all("tr")
 
     for tr in changesTrs:
