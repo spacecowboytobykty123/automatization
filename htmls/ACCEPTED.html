@@ -1,0 +1,3435 @@
+
+
+		<html>
+		<head>
+			<title>Боевая шина: Информационная страница ИИС ЦОН</title>
+			<link rel="stylesheet" type="text/css" href="/csp/sys/intersystems.css" title="Standard Style" >
+ 
+
+<style>
+table.MenuPaneTable {
+	background: #fff8e7;
+}
+table.MenuPaneTable th {
+	font-size: 1.0em;
+	font-weight: bold;
+	text-align: left;
+	padding: 5px;
+	font-variant: small-caps;
+	border: 1px darkblue solid;
+}
+table.MenuPaneTable th {
+	font-size: 1.0em;
+	text-align: left;
+	padding: 5px;
+}
+.MenuPaneItem {
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px;
+	padding-top: 4px;
+	border: 1px #fff8e7 solid;
+}
+.MenuPaneItem a {
+	text-decoration: none;
+}
+.MenuPaneItem a:link {
+	color: darkblue;
+}
+.MenuPaneItem a:visited {
+	color: darkblue;
+}
+.MenuPaneItem a:active {
+	color: darkblue;
+}
+.MenuPaneItemHilight {
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px;
+	padding-top: 4px;
+	border: 1px darkblue dotted;
+}
+.MenuPaneItemHilight a {
+	text-decoration: none;
+}
+.MenuPaneItemHilight a:link {
+	color: red;
+}
+.MenuPaneItemHilight a:visited {
+	color: red;
+}
+.MenuPaneItemHilight a:active {
+	color: red;
+}
+.MenuPaneItemDisabled {
+	font-weight: bold;
+	color: gray;
+	text-align: left;
+	padding: 2px;
+	padding-top: 4px;
+	border: 1px #fff8e7 solid;
+}
+.MenuPaneHelpBox {
+	font-size: 0.8em;
+	border-top: 1px darkblue solid;
+	background: #EEFFFF;
+	line-height: 120%;
+	text-align: left;
+	padding: 4px;
+	filter:
+		progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#CCDDFF', EndColorStr='#FFFFFF');
+}
+.MenuPaneHelpBox b {
+	color: darkblue;
+}
+.MenuPaneHelpBoxOff {
+	font-size: 0.8em;
+	border: 1px white solid;
+	line-height: 120%;
+	padding: 4px;
+}
+span.MenuPaneSubtitle {
+	font-size: 0.8em;
+	font-weight: normal;
+	font-variant: normal;
+}
+	</style>
+ 
+	
+			
+ 
+			<script type="text/javascript">
+			function GetCheckboxValues(cbName,elementId) {
+				var idList = '';
+				var checkbox = document.getElementsByName(cbName);
+				for (i = 0; i < checkbox.length; i++) {
+					if (checkbox[i].checked) {
+						idList = idList + checkbox[i].value+';';
+					}
+				}
+				if (idList!='') {
+					document.getElementsByName(elementId)[0].value = idList
+				}
+			}
+ 
+			function CheckAll(all,cbName) {
+  				if (all.type == 'checkbox') {
+	  				var checkbox = document.getElementsByName(cbName)
+					for (i = 0; i < checkbox.length; i++) {
+						checkbox[i].checked = all.checked;
+					}
+	  			}
+			}
+		   </script>
+		</head>
+ 
+		<body>
+			<!-- Шапка страницы -->
+			<table width="100%" height="20" cols="3">
+			<tr>
+				<td width="15%"/>
+				<td width="70%" align="center"><h1>Боевая шина: Информационная страница ИИС ЦОН</h1></td>
+				<td width="15%"/>
+			</tr>
+			<tr>
+				<td width="15%" nowrap style="padding-left: 10px"><a href=isc.util.About.cls>[На главную]</a>&nbsp;&nbsp;&nbsp;<a href=isc.util.Map.cls>[На карту]</a></td>
+				<td width="70%" nowrap align="center"><a href=?Action=26>[Авторизация в системе]</a></td>
+				<td width="15%" align="right" style="padding-right: 10px"><a href="iiscon.htm">[Справка]</a></td>
+			</tr>
+			</table>
+ 
+			<hr/>
+ 
+			<!-- Вывод содержимого страницы в соответствии выбранным действием -->
+<div style="padding-left: 10px;">
+
+		<b>Основные свойства заявки</b><br>
+		Услуга: Z13-4 - Выдача повторного свидетельства о рождении<br>
+		Регистратор: MJ-X-H-SC1 - Отдел Сарыагашского района  по обслуживанию населения филиала некоммерческого акционерного общества «Государственная корпорация «Правительство для граждан» по Туркестанской области<br>
+		Исполнитель: ADM-X-H-EMPZM1 - Отдел Сарыагашского района по РАГС филиала НАО «ГК «Правительство для граждан» по Туркестанской области
+
+	
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>id<br></td>
+<td>applicationId<br></td>
+<td>serviceType<br></td>
+<td>createDate<br></td>
+<td>lastChangeDate<br></td>
+<td>registerOrg<br></td>
+<td>executorOrg<br></td>
+<td>deliveryOrg<br></td>
+<td>deadline<br></td>
+<td>currentState<br></td>
+<td>isSuspended<br></td>
+<td>isPositive<br></td>
+<td>isRegisterNotifyNeeded<br></td>
+<td>isExecutorNotifyNeeded<br></td>
+<td>versionNumber<br></td>
+<td>registerId<br></td>
+<td>registerDate<br></td>
+<td>smsCode<br></td>
+<td>cost<br></td>
+<td>lang<br></td>
+<td>finalDocumentLang<br></td>
+<td>isPersonApplicant<br></td>
+<td>paperState<br></td>
+<td>suspensionStatusInfo<br></td>
+<td>suspensionStatusInfoKz<br></td>
+<td>registerCallDate<br></td>
+<td>updateCallDate<br></td>
+<td>registerXmlSignature<br></td>
+<td>updateXmlSignature<br></td>
+<td>registerRequestBody<br></td>
+<td>updateRequestBody<br></td>
+<td>applicantName<br></td>
+<td>applicantGender<br></td>
+<td>finishedDate<br></td>
+<td>handedDate<br></td>
+<td>applicantIdent<br></td>
+<td>executionProcessName<br></td>
+<td>executorEndpoint<br></td>
+<td>sessionId<br></td>
+<td>cancelDate<br></td>
+<td>cancelState<br></td>
+<td>cancelStatusInfo<br></td>
+<td>cancelStatusInfoKz<br></td>
+<td>createDateYMD<br></td>
+<td>servCategory<br></td>
+<td>regionCode<br></td>
+<td>districtCode<br></td>
+<td>deadlineDateYMD<br></td>
+<td>appPrefixCode<br></td>
+<td>appSourceCode<br></td>
+<td>registerEmployee<br></td>
+<td>regFeedback<br></td>
+<td>regWaitTime<br></td>
+<td>regProcTime<br></td>
+<td>regPriority<br></td>
+<td>isExpired<br></td>
+<td>registerMethod<br></td>
+<td>registerDateYMD<br></td>
+<td>finishedDateYMD<br></td>
+<td>handedDateYMD<br></td>
+<td>applicantBirthdayYMD<br></td>
+<td>applicantAge<br></td>
+<td>subServiceType<br></td>
+<td>applicantNameString<br></td>
+<td>asEService<br></td>
+<td>businessState<br></td>
+<td>cancelReason<br></td>
+<td>compositeId<br></td>
+<td>deadlineTimeH<br></td>
+<td>deadlineTimeM<br></td>
+<td>deliveryId<br></td>
+<td>documentDelivery<br></td>
+<td>eQueueRegTicket<br></td>
+<td>execFeedback<br></td>
+<td>executorId<br></td>
+<td>finalDocument<br></td>
+<td>finishedTimeH<br></td>
+<td>finishedTimeM<br></td>
+<td>hasContacts<br></td>
+<td>hasTrustee<br></td>
+<td>isForNotification<br></td>
+<td>paymentType<br></td>
+<td>refuseReason<br></td>
+<td>registerTimeH<br></td>
+<td>registerTimeM<br></td>
+<td>shepCorrelationId<br></td>
+<td>subDistrictCode<br></td>
+<td>usedBiometrics<br></td>
+</tr>
+<tr>
+<td>732832027<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td><a href=?Action=13&objId=2 target="_self">2</a><br></td>
+<td>2025-04-21 05:02:50.894<br></td>
+<td>2025-04-21 05:15:26.938<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=9&objId=19141 target="_self">19141</a><br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td>2025-04-25 18:59:59.082<br></td>
+<td>ACCEPTED<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>0<br></td>
+<td>8<br></td>
+<td>002270550765<br></td>
+<td>2025-04-21 05:02:50.827<br></td>
+<td>49<br></td>
+<td>0<br></td>
+<td>RUS<br></td>
+<td>RUS<br></td>
+<td>1<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>2025-04-21 05:02:50.894<br></td>
+<td>2025-04-21 05:15:26.912<br></td>
+<td><br></td>
+<td><br></td>
+<td>,'^isc.kzcon.model.ApplicationS×àR%XML.GlobalCharacterStream^isc.kzcon.model.ApplicationS<br></td>
+<td>,'^isc.kzcon.model.ApplicationS×ëàR%XML.GlobalCharacterStream^isc.kzcon.model.ApplicationS<br></td>
+<td>САЛИДДИНОВА УГИЛОЙ ЖАМАЛИДИН КИЗИ<br></td>
+<td>F<br></td>
+<td><br></td>
+<td><br></td>
+<td>920530000084<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>20250421<br></td>
+<td>13<br></td>
+<td>X<br></td>
+<td>X-H<br></td>
+<td>20250425<br></td>
+<td>002<br></td>
+<td>100<br></td>
+<td>10971<br></td>
+<td><br></td>
+<td>2<br></td>
+<td>2<br></td>
+<td>0<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421<br></td>
+<td><br></td>
+<td><br></td>
+<td>19920530<br></td>
+<td>32<br></td>
+<td><br></td>
+<td>САЛИДДИНОВА УГИЛОЙ ЖАМАЛИДИН КИЗИ<br></td>
+<td>0<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>24<br></td>
+<td>60<br></td>
+<td><br></td>
+<td>SC<br></td>
+<td>25<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>0<br></td>
+<td>1<br></td>
+<td>0<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>11<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>X-H<br></td>
+<td>0<br></td>
+</tr>
+</table>
+<br><b>Список документов</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>id<br></td>
+<td>documentId<br></td>
+<td>applicationId<br></td>
+<td>createDate<br></td>
+<td>createTime<br></td>
+<td>docTypeCode<br></td>
+<td>copyType<br></td>
+<td>isPersonApplicant<br></td>
+<td>applicantIdent<br></td>
+<td>lang<br></td>
+<td>docName<br></td>
+<td>docNum<br></td>
+<td>pages<br></td>
+<td>docDate<br></td>
+<td>effectiveDate<br></td>
+<td>expirationDate<br></td>
+<td>text<br></td>
+<td>barcode<br></td>
+<td>documentBinary<br></td>
+<td>sessionId<br></td>
+<td>versionNumber<br></td>
+</tr>
+<tr>
+<td><a href=?Action=2803&objId=378884729 target="_self">378884729</a><br></td>
+<td>41b07976-e7103-4b74-9c30-63cf74e165b9<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>20250421<br></td>
+<td>10:10:42<br></td>
+<td>D13306<br></td>
+<td>ELECTRONIC<br></td>
+<td>1<br></td>
+<td>920530000084<br></td>
+<td>RUS<br></td>
+<td>Фотография гражданина<br></td>
+<td>41b07976-e7103-4b74-9c30-63cf74e165b9<br></td>
+<td><br></td>
+<td>2025-04-21<br></td>
+<td>2025-04-21<br></td>
+<td>2025-04-21<br></td>
+<td><br></td>
+<td><br></td>
+<td>377382742<br></td>
+<td><br></td>
+<td>2<br></td>
+</tr>
+<tr>
+<td><a href=?Action=2803&objId=378884871 target="_self">378884871</a><br></td>
+<td>f4fcf160-e246-413d-a61c-1d2a8ab7bbdc<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>20250421<br></td>
+<td>10:13:12<br></td>
+<td>Z355<br></td>
+<td>ELECTRONIC<br></td>
+<td>1<br></td>
+<td>920530000084<br></td>
+<td>RUS<br></td>
+<td>Заявление установленной формы о выдаче повторного свидетельства о регистрации актов гражданского состояния<br></td>
+<td>52669327284<br></td>
+<td><br></td>
+<td>2025-04-21<br></td>
+<td>2025-04-21<br></td>
+<td>2025-04-21<br></td>
+<td><br></td>
+<td><br></td>
+<td>377382884<br></td>
+<td><br></td>
+<td>2<br></td>
+</tr>
+</table>
+<br><b>История UpdateApplication</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>application<br></td>
+<td>createDate<br></td>
+<td>id<br></td>
+<td>requestBody<br></td>
+<td>versionNumber<br></td>
+<td>xmlSignature<br></td>
+</tr>
+<tr>
+<td>732832027<br></td>
+<td>2025-04-21 05:15:26.912<br></td>
+<td>694077777<br></td>
+<td>yes<br></td>
+<td>0<br></td>
+<td><br></td>
+</tr>
+</table>
+<br><b>История ChangeApplicationStatus</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>application<br></td>
+<td>cancelState<br></td>
+<td>createDate<br></td>
+<td>id<br></td>
+<td>isPositive<br></td>
+<td>isSuspended<br></td>
+<td>newStatus<br></td>
+<td>oldStatus<br></td>
+<td>paperState<br></td>
+<td>requestBody<br></td>
+<td>versionNumber<br></td>
+<td>xmlSignature<br></td>
+</tr>
+<tr>
+<td>732832027<br></td>
+<td><br></td>
+<td>2025-04-21 05:15:26.938<br></td>
+<td><a href=?Action=404&objId=2388544023 target="_self">2388544023</a><br></td>
+<td><br></td>
+<td><br></td>
+<td>ACCEPTED<br></td>
+<td>REGISTERED<br></td>
+<td><br></td>
+<td>.)!^isc.kzcon.model.StatusHistorySòí]%XML.GlobalCharacterStream!^isc.kzcon.model.StatusHistoryS<br></td>
+<td>0<br></td>
+<td><br></td>
+</tr>
+</table>
+<br><b>История QueryEGovGate, время ожидания сервисов - 40 сек.</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>id<br></td>
+<td>applicationId<br></td>
+<td>systemCode<br></td>
+<td>code<br></td>
+<td>callDate<br></td>
+<td>requestTypeCode<br></td>
+<td>endpointCode<br></td>
+<td>errorMessage<br></td>
+<td>localRequestId<br></td>
+<td>requestId<br></td>
+<td>requestDate<br></td>
+<td>responseDate<br></td>
+<td>versionNumber<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744842065 target="_self">1744842065</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:09.295<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744842065<br></td>
+<td>2025-04-21 05:03:09.303<br></td>
+<td>2025-04-21 05:03:09.326<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744842074 target="_self">1744842074</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:09.379<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744842074<br></td>
+<td>2025-04-21 05:03:09.385<br></td>
+<td>2025-04-21 05:03:09.625<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744842091 target="_self">1744842091</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:09.734<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>e30fc0b8-d8c9-4af9-8a94-3ca77a0890bc<br></td>
+<td>1744842091<br></td>
+<td>2025-04-21 05:03:09.741<br></td>
+<td>2025-04-21 05:03:10.213<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744842420 target="_self">1744842420</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:17.692<br></td>
+<td>MGOV/getInfoByIin<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744842420<br></td>
+<td>2025-04-21 05:03:17.698<br></td>
+<td>2025-04-21 05:03:17.733<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744844078 target="_self">1744844078</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:57.369<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744844078<br></td>
+<td>2025-04-21 05:03:57.375<br></td>
+<td>2025-04-21 05:03:57.406<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744844081 target="_self">1744844081</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:57.448<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744844081<br></td>
+<td>2025-04-21 05:03:57.454<br></td>
+<td>2025-04-21 05:03:57.671<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744844099 target="_self">1744844099</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:03:57.772<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>e7b3d0dc-55e3-48af-8b5a-1d1eb36306ee<br></td>
+<td>1744844099<br></td>
+<td>2025-04-21 05:03:57.778<br></td>
+<td>2025-04-21 05:03:57.863<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848659 target="_self">1744848659</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:50.216<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744848659<br></td>
+<td>2025-04-21 05:05:50.221<br></td>
+<td>2025-04-21 05:05:50.354<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848668 target="_self">1744848668</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:50.397<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744848668<br></td>
+<td>2025-04-21 05:05:50.404<br></td>
+<td>2025-04-21 05:05:50.589<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848685 target="_self">1744848685</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:50.713<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>c7c345c3-7b2c-41f4-849a-fa7fe566efc9<br></td>
+<td>1744848685<br></td>
+<td>2025-04-21 05:05:50.722<br></td>
+<td>2025-04-21 05:05:50.823<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848689 target="_self">1744848689</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:50.963<br></td>
+<td>SHEP2/GBDFLUniversal_token<br></td>
+<td><br></td>
+<td>ОШИБКА #6248: SOAP ответ является ошибкой SOAP: faultcode=Server
+faultstring=Сервис ответил с ошибкой
+faultactor=
+detail=<ns2:SendMessageFault1_SendMessageFault xmlns:ns2="http://bip.bee.kz/SyncChannel/v10/Types"><errorCode>SCE013</errorCode><errorMessage>Сервис ответил с ошибкой</errorMessage><errorData>&lt;html&gt;&lt;body&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;
+The server returned an invalid or incomplete response.
+&lt;/body&gt;&lt;/html&gt;
+</errorData><errorDate>2025-04-21T10:05:50.930749488+05:00</errorDate><sessionId>{2286f0ab-540e-4ef2-bf42-7127fcb09bdd}</sessionId></ns2:SendMessageFault1_SendMessageFault><br></td>
+<td>c8086ecf-e4e3-4064-b1cf-06915b8bb865<br></td>
+<td>1744848689<br></td>
+<td>2025-04-21 05:05:50.968<br></td>
+<td>2025-04-21 05:05:50.988<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848893 target="_self">1744848893</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:55.276<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744848893<br></td>
+<td>2025-04-21 05:05:55.282<br></td>
+<td>2025-04-21 05:05:55.327<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848901 target="_self">1744848901</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:55.369<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744848901<br></td>
+<td>2025-04-21 05:05:55.375<br></td>
+<td>2025-04-21 05:05:55.588<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744848916 target="_self">1744848916</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:05:55.703<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>019aa0dd-99c8-4274-a8f6-471004a30c26<br></td>
+<td>1744848916<br></td>
+<td>2025-04-21 05:05:55.71<br></td>
+<td>2025-04-21 05:05:55.805<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744852489 target="_self">1744852489</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:07:35.955<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744852489<br></td>
+<td>2025-04-21 05:07:35.961<br></td>
+<td>2025-04-21 05:07:35.982<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744852493 target="_self">1744852493</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:07:36.027<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744852493<br></td>
+<td>2025-04-21 05:07:36.033<br></td>
+<td>2025-04-21 05:07:36.223<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744852513 target="_self">1744852513</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:07:36.345<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>3373618a-d1a4-42a8-9f78-bdbb892fa36f<br></td>
+<td>1744852513<br></td>
+<td>2025-04-21 05:07:36.351<br></td>
+<td>2025-04-21 05:07:36.434<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744855515 target="_self">1744855515</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:08:52.505<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744855515<br></td>
+<td>2025-04-21 05:08:52.51<br></td>
+<td>2025-04-21 05:08:52.541<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744855524 target="_self">1744855524</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:08:52.584<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744855524<br></td>
+<td>2025-04-21 05:08:52.59<br></td>
+<td>2025-04-21 05:08:52.77<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744855542 target="_self">1744855542</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:08:52.893<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>b05239b3-85bb-491a-aefc-233c9fcb3f85<br></td>
+<td>1744855542<br></td>
+<td>2025-04-21 05:08:52.899<br></td>
+<td>2025-04-21 05:08:52.991<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744858650 target="_self">1744858650</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:15.935<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744858650<br></td>
+<td>2025-04-21 05:10:15.941<br></td>
+<td>2025-04-21 05:10:15.969<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744858655 target="_self">1744858655</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:16.015<br></td>
+<td>MTSZN/GetStatus<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744858655<br></td>
+<td>2025-04-21 05:10:16.02<br></td>
+<td>2025-04-21 05:10:16.216<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744858670 target="_self">1744858670</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:16.319<br></td>
+<td>SHEP2/KDP<br></td>
+<td><br></td>
+<td><br></td>
+<td>9ae0a0f7-0ec0-4855-b496-8d9a506569f9<br></td>
+<td>1744858670<br></td>
+<td>2025-04-21 05:10:16.325<br></td>
+<td>2025-04-21 05:10:16.431<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744858675 target="_self">1744858675</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:16.469<br></td>
+<td>SHEP2/GBDFLUniversal_token<br></td>
+<td><br></td>
+<td><br></td>
+<td>6b5f223a-3220-486e-bc58-78b2f98a4973<br></td>
+<td>1744858675<br></td>
+<td>2025-04-21 05:10:16.475<br></td>
+<td>2025-04-21 05:10:28.757<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744859103 target="_self">1744859103</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:28.806<br></td>
+<td>GBDFLService/PersonPhotoService<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744859103<br></td>
+<td>2025-04-21 05:10:28.813<br></td>
+<td>2025-04-21 05:10:31.234<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744859777 target="_self">1744859777</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:10:48.792<br></td>
+<td>SHEP2/PersonStatusService<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744859777<br></td>
+<td>2025-04-21 05:10:48.799<br></td>
+<td>2025-04-21 05:10:49.897<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744860241 target="_self">1744860241</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:11:01.876<br></td>
+<td>SHEP2/GBDFL<br></td>
+<td><br></td>
+<td><br></td>
+<td>f1f035df-035a-47ed-8dcd-81f88cb36b4a<br></td>
+<td>1744860241<br></td>
+<td>2025-04-21 05:11:01.883<br></td>
+<td>2025-04-21 05:11:23.1<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744863736 target="_self">1744863736</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:12:29.037<br></td>
+<td>EGOV/ConAccess<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744863736<br></td>
+<td>2025-04-21 05:12:29.043<br></td>
+<td>2025-04-21 05:12:29.062<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td><a href=?Action=403&objId=1744871357 target="_self">1744871357</a><br></td>
+<td>002270550765<br></td>
+<td>002<br></td>
+<td>MJ-X-H-SC1<br></td>
+<td>2025-04-21 05:15:26.813<br></td>
+<td>SMSGateway/sendMessage<br></td>
+<td><br></td>
+<td><br></td>
+<td>2270550765<br></td>
+<td>1744871357<br></td>
+<td>2025-04-21 05:15:26.819<br></td>
+<td>2025-04-21 05:15:26.854<br></td>
+<td>1<br></td>
+</tr>
+</table>
+<br><b>История ForwardApplication</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>msgClass<br></td>
+<td>callDate<br></td>
+<td>callerOrg<br></td>
+<td>systemCode<br></td>
+<td>requestBodySize<br></td>
+<td>xmlSignature<br></td>
+<td>requestTime<br></td>
+<td>sessionId<br></td>
+<td>response<br></td>
+<td>AcceptEncoding<br></td>
+<td>applicationId<br></td>
+<td>destOrgCode<br></td>
+<td>endpointUrl<br></td>
+<td>failureTimeout<br></td>
+<td>newEGovGateServiceId<br></td>
+<td>oneWay<br></td>
+<td>requestBody<br></td>
+<td>rollbackSystem<br></td>
+<td>securityHeader<br></td>
+<td>shepCorrelationId<br></td>
+<td>shepMessageId<br></td>
+<td>shepMessageType<br></td>
+<td>shepRouteId<br></td>
+<td>shepSessionId<br></td>
+<td>soapTimeout<br></td>
+<td>soapaction<br></td>
+<td>ID<br></td>
+<td>Banked<br></td>
+<td>BusinessProcessId<br></td>
+<td>CorrespondingMessageId<br></td>
+<td>Description<br></td>
+<td>ErrorStatus<br></td>
+<td>Invocation<br></td>
+<td>IsError<br></td>
+<td>MessageBodyClassName<br></td>
+<td>MessageBodyId<br></td>
+<td>Priority<br></td>
+<td>Resent<br></td>
+<td>ReturnQueueName<br></td>
+<td>SessionId<br></td>
+<td>SourceBusinessType<br></td>
+<td>SourceConfigName<br></td>
+<td>Status<br></td>
+<td>SuperSession<br></td>
+<td>TargetBusinessType<br></td>
+<td>TargetConfigName<br></td>
+<td>TargetQueueName<br></td>
+<td>TimeCreated<br></td>
+<td>TimeProcessed<br></td>
+<td>Type<br></td>
+</tr>
+</table>
+<br><b>История updateKPI</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>ApplicationId<br></td>
+<td>CreateDT<br></td>
+<td>execFeedback<br></td>
+<td>regFeedback<br></td>
+</tr>
+</table>
+<br><b>Неудачные запросы в шину (не более 100)</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>CreateDT<br></td>
+<td>action<br></td>
+<td>applicationId<br></td>
+<td>errorMessage<br></td>
+</tr>
+</table>
+<br><b>Входящие SOAP-запросы</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>msgClass<br></td>
+<td>applicationId<br></td>
+<td>callDate<br></td>
+<td>callerOrg<br></td>
+<td>systemCode<br></td>
+<td>requestBody<br></td>
+<td>requestBodySize<br></td>
+<td>xmlSignature<br></td>
+<td>requestTime<br></td>
+<td>sessionId<br></td>
+<td>response<br></td>
+<td>shepCorrelationId<br></td>
+<td>shepMessageId<br></td>
+<td>shepSessionId<br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841705478 target="_self">5841705478</a><br></td>
+<td>RegisterApplicationRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:02:50.894<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>588<br></td>
+<td><br></td>
+<td>.008328<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649769279 target="_blank">40649769279</a><br></td>
+<td><a href=?Action=22&msgId=5841705478 target="_self"></a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841706701 target="_self">5841706701</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:09.295<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.030724<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649775162 target="_blank">40649775162</a><br></td>
+<td><a href=?Action=22&msgId=5841706701 target="_self">33386218260</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841706714 target="_self">5841706714</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:09.379<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.246882<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649775233 target="_blank">40649775233</a><br></td>
+<td><a href=?Action=22&msgId=5841706714 target="_self">33386218386</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841706746 target="_self">5841706746</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:09.734<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.47902<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649775382 target="_blank">40649775382</a><br></td>
+<td><a href=?Action=22&msgId=5841706746 target="_self">33386218578</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841707254 target="_self">5841707254</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:17.692<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>674<br></td>
+<td><br></td>
+<td>.042342<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649777749 target="_blank">40649777749</a><br></td>
+<td><a href=?Action=22&msgId=5841707254 target="_self">33386220226</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841709697 target="_self">5841709697</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:57.369<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.036571<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649788618 target="_blank">40649788618</a><br></td>
+<td><a href=?Action=22&msgId=5841709697 target="_self">33386228420</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841709701 target="_self">5841709701</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:57.448<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.223561<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649788630 target="_blank">40649788630</a><br></td>
+<td><a href=?Action=22&msgId=5841709701 target="_self">33386228464</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841709725 target="_self">5841709725</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:03:57.772<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.092175<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649788704 target="_blank">40649788704</a><br></td>
+<td><a href=?Action=22&msgId=5841709725 target="_self">33386228498</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841717794 target="_self">5841717794</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:50.216<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.138866<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649826675 target="_blank">40649826675</a><br></td>
+<td><a href=?Action=22&msgId=5841717794 target="_self">33386257379</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841717804 target="_self">5841717804</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:50.397<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.192714<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649826709 target="_blank">40649826709</a><br></td>
+<td><a href=?Action=22&msgId=5841717804 target="_self">33386257424</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841717828 target="_self">5841717828</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:50.713<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.111417<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649826792 target="_blank">40649826792</a><br></td>
+<td><a href=?Action=22&msgId=5841717828 target="_self">33386257473</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841717840 target="_self">5841717840</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:50.963<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>3266<br></td>
+<td><br></td>
+<td>.024027<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649826850 target="_blank">40649826850</a><br></td>
+<td><a href=?Action=22&msgId=5841717840 target="_self">33386257511</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841718237 target="_self">5841718237</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:55.276<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.051282<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649828638 target="_blank">40649828638</a><br></td>
+<td><a href=?Action=22&msgId=5841718237 target="_self">33386258893</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841718250 target="_self">5841718250</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:55.369<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.219719<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649828684 target="_blank">40649828684</a><br></td>
+<td><a href=?Action=22&msgId=5841718250 target="_self">33386259023</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841718294 target="_self">5841718294</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:05:55.703<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.101988<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649828822 target="_blank">40649828822</a><br></td>
+<td><a href=?Action=22&msgId=5841718294 target="_self">33386259106</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841725086 target="_self">5841725086</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:07:35.955<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.027283<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649862441 target="_blank">40649862441</a><br></td>
+<td><a href=?Action=22&msgId=5841725086 target="_self">33386284764</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841725091 target="_self">5841725091</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:07:36.027<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.197854<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649862473 target="_blank">40649862473</a><br></td>
+<td><a href=?Action=22&msgId=5841725091 target="_self">33386284845</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841725119 target="_self">5841725119</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:07:36.345<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.089036<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649862604 target="_blank">40649862604</a><br></td>
+<td><a href=?Action=22&msgId=5841725119 target="_self">33386284900</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841729364 target="_self">5841729364</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:08:52.505<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.036785<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649881328 target="_blank">40649881328</a><br></td>
+<td><a href=?Action=22&msgId=5841729364 target="_self">33386298948</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841729376 target="_self">5841729376</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:08:52.584<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.187021<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649881386 target="_blank">40649881386</a><br></td>
+<td><a href=?Action=22&msgId=5841729376 target="_self">33386299014</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841729399 target="_self">5841729399</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:08:52.893<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.098545<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649881482 target="_blank">40649881482</a><br></td>
+<td><a href=?Action=22&msgId=5841729399 target="_self">33386299058</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841734689 target="_self">5841734689</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:15.935<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.034324<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649905918 target="_blank">40649905918</a><br></td>
+<td><a href=?Action=22&msgId=5841734689 target="_self">33386317396</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841734696 target="_self">5841734696</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:16.015<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>722<br></td>
+<td><br></td>
+<td>.202469<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649905936 target="_blank">40649905936</a><br></td>
+<td><a href=?Action=22&msgId=5841734696 target="_self">33386317438</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841734714 target="_self">5841734714</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:16.319<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1661<br></td>
+<td><br></td>
+<td>.112631<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649906012 target="_blank">40649906012</a><br></td>
+<td><a href=?Action=22&msgId=5841734714 target="_self">33386317474</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841734722 target="_self">5841734722</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:16.469<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>3266<br></td>
+<td><br></td>
+<td>12.289035<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649906047 target="_blank">40649906047</a><br></td>
+<td><a href=?Action=22&msgId=5841734722 target="_self">33386320348</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841735493 target="_self">5841735493</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:28.806<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>785<br></td>
+<td><br></td>
+<td>2.433082<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649909890 target="_blank">40649909890</a><br></td>
+<td><a href=?Action=22&msgId=5841735493 target="_self">33386320864</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841736225 target="_self">5841736225</a><br></td>
+<td>UploadScanRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:42.074<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>17213<br></td>
+<td><br></td>
+<td><br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649913531 target="_blank">40649913531</a><br></td>
+<td><a href=?Action=22&msgId=5841736225 target="_self">33386323151</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841736680 target="_self">5841736680</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:10:48.792<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1527<br></td>
+<td><br></td>
+<td>1.105937<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649915872 target="_blank">40649915872</a><br></td>
+<td><a href=?Action=22&msgId=5841736680 target="_self">33386325158</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841737403 target="_self">5841737403</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:11:01.876<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>821<br></td>
+<td><br></td>
+<td>21.224735<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649919118 target="_blank">40649919118</a><br></td>
+<td><a href=?Action=22&msgId=5841737403 target="_self">33386333551</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841743125 target="_self">5841743125</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:12:29.037<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>738<br></td>
+<td><br></td>
+<td>.02493<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649946673 target="_blank">40649946673</a><br></td>
+<td><a href=?Action=22&msgId=5841743125 target="_self">33386348517</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841746420 target="_self">5841746420</a><br></td>
+<td>UploadScanRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:13:12.537<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>40240<br></td>
+<td><br></td>
+<td><br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40649961675 target="_blank">40649961675</a><br></td>
+<td><a href=?Action=22&msgId=5841746420 target="_self">33386359867</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841754692 target="_self">5841754692</a><br></td>
+<td>QueryEGovGateRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:15:26.813<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>1010<br></td>
+<td><br></td>
+<td>.041943<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40650000014 target="_blank">40650000014</a><br></td>
+<td><a href=?Action=22&msgId=5841754692 target="_self">33386389081</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841754698 target="_self">5841754698</a><br></td>
+<td>UpdateApplicationRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:15:26.912<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>9042<br></td>
+<td><br></td>
+<td>.015658<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40650000050 target="_blank">40650000050</a><br></td>
+<td><a href=?Action=22&msgId=5841754698 target="_self"></a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><a href=?Action=22&msgId=5841754700 target="_self">5841754700</a><br></td>
+<td>ChangeApplicationStatusRequest<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21 05:15:26.938<br></td>
+<td><a href=?Action=9&objId=1625 target="_self">1625</a><br></td>
+<td><a href=?Action=906&systemCode=002 target="_self">002</a><br></td>
+<td>yes<br></td>
+<td>661<br></td>
+<td><br></td>
+<td>.006529<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=&$ID1=40650000059 target="_blank">40650000059</a><br></td>
+<td><a href=?Action=22&msgId=5841754700 target="_self">33386389099</a><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+</table>
+<br><b>Исходящие SOAP-запросы</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>msgId<br></td>
+<td>ID<br></td>
+<td>AcceptEncoding<br></td>
+<td>applicationId<br></td>
+<td>destOrgCode<br></td>
+<td>endpointUrl<br></td>
+<td>failureTimeout<br></td>
+<td>newEGovGateServiceId<br></td>
+<td>oneWay<br></td>
+<td>requestBody<br></td>
+<td>rollbackSystem<br></td>
+<td>securityHeader<br></td>
+<td>shepCorrelationId<br></td>
+<td>shepMessageId<br></td>
+<td>shepMessageType<br></td>
+<td>shepRouteId<br></td>
+<td>soapTimeout<br></td>
+<td>soapaction<br></td>
+<td>ID<br></td>
+<td>Banked<br></td>
+<td>BusinessProcessId<br></td>
+<td>CorrespondingMessageId<br></td>
+<td>Description<br></td>
+<td>ErrorStatus<br></td>
+<td>Invocation<br></td>
+<td>IsError<br></td>
+<td>MessageBodyClassName<br></td>
+<td>MessageBodyId<br></td>
+<td>Priority<br></td>
+<td>Resent<br></td>
+<td>ReturnQueueName<br></td>
+<td>SessionId<br></td>
+<td>SourceBusinessType<br></td>
+<td>SourceConfigName<br></td>
+<td>Status<br></td>
+<td>SuperSession<br></td>
+<td>TargetBusinessType<br></td>
+<td>TargetConfigName<br></td>
+<td>TargetQueueName<br></td>
+<td>TimeCreated<br></td>
+<td>TimeProcessed<br></td>
+<td>Type<br></td>
+</tr>
+<tr>
+<td>33386213781<br></td>
+<td><a href=?Action=23&msgId=33386213781 target="_self">33386213781</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td>!^Ens.MessageBodyS%¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>urn:registerApplicationNotification<br></td>
+<td>40649770058<br></td>
+<td>0<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=2 target="_self">2</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.NotificationRequest<br></td>
+<td>33386213781<br></td>
+<td>2<br></td>
+<td><br></td>
+<td><br></td>
+<td>40649770058<br></td>
+<td>1<br></td>
+<td>ARMMON_NOTIFICATION<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>SEND_NOTIFICATION<br></td>
+<td><br></td>
+<td>2025-04-21 05:02:53.026<br></td>
+<td>2025-04-21 05:02:53.216<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386213782<br></td>
+<td><a href=?Action=23&msgId=33386213782 target="_self">33386213782</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>Личный кабинет ПЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td>A.PC_PEP.IISCON_NOTIFICATION_RECEIVER_V2<br></td>
+<td>1<br></td>
+<td>!^Ens.MessageBodyS%¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649769291<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649769298<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.NotificationRequest<br></td>
+<td>33386213782<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:36156<br></td>
+<td>40649769291<br></td>
+<td>1<br></td>
+<td>PEP_NOTIFICATION<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>SHEP2_SYNC<br></td>
+<td>SHEP2_SYNC<br></td>
+<td>2025-04-21 05:02:50.926<br></td>
+<td>2025-04-21 05:02:50.953<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386218241<br></td>
+<td><a href=?Action=23&msgId=33386218241 target="_self">33386218241</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS2¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649775169<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649775189<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386218241<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:60112<br></td>
+<td>40649775162<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:09.304<br></td>
+<td>2025-04-21 05:03:09.325<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386218294<br></td>
+<td><a href=?Action=23&msgId=33386218294 target="_self">33386218294</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySG2¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649775236<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649775345<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386218294<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:55412<br></td>
+<td>40649775233<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:09.386<br></td>
+<td>2025-04-21 05:03:09.624<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386218414<br></td>
+<td><a href=?Action=23&msgId=33386218414 target="_self">33386218414</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS2¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649775383<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649775598<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386218414<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:33236<br></td>
+<td>40649775382<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:09.741<br></td>
+<td>2025-04-21 05:03:10.212<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386220218<br></td>
+<td><a href=?Action=23&msgId=33386220218 target="_self">33386220218</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>60<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySõ7¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>60<br></td>
+<td><br></td>
+<td>40649777751<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649777756<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386220218<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:22124<br></td>
+<td>40649777749<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:17.699<br></td>
+<td>2025-04-21 05:03:17.732<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386228417<br></td>
+<td><a href=?Action=23&msgId=33386228417 target="_self">33386228417</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySQ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649788619<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649788622<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386228417<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:37024<br></td>
+<td>40649788618<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:57.376<br></td>
+<td>2025-04-21 05:03:57.405<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386228427<br></td>
+<td><a href=?Action=23&msgId=33386228427 target="_self">33386228427</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS%Q¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649788632<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649788680<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386228427<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:38432<br></td>
+<td>40649788630<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:57.455<br></td>
+<td>2025-04-21 05:03:57.67<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386228483<br></td>
+<td><a href=?Action=23&msgId=33386228483 target="_self">33386228483</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySWQ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649788707<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649788723<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386228483<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:23460<br></td>
+<td>40649788704<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:03:57.779<br></td>
+<td>2025-04-21 05:03:57.862<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386257366<br></td>
+<td><a href=?Action=23&msgId=33386257366 target="_self">33386257366</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS¡¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649826676<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649826695<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386257366<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:28496<br></td>
+<td>40649826675<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:50.222<br></td>
+<td>2025-04-21 05:05:50.353<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386257390<br></td>
+<td><a href=?Action=23&msgId=33386257390 target="_self">33386257390</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS)¡¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649826710<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649826750<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386257390<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:34700<br></td>
+<td>40649826709<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:50.404<br></td>
+<td>2025-04-21 05:05:50.588<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386257461<br></td>
+<td><a href=?Action=23&msgId=33386257461 target="_self">33386257461</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySh¡¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649826795<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649826810<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386257461<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:46304<br></td>
+<td>40649826792<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:50.723<br></td>
+<td>2025-04-21 05:05:50.822<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386257508<br></td>
+<td><a href=?Action=23&msgId=33386257508 target="_self">33386257508</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS¡¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649826851<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649826854<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386257508<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:55412<br></td>
+<td>40649826850<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:50.969<br></td>
+<td>2025-04-21 05:05:50.987<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386258880<br></td>
+<td><a href=?Action=23&msgId=33386258880 target="_self">33386258880</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS[¥¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649828641<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649828658<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386258880<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:53540<br></td>
+<td>40649828638<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:55.283<br></td>
+<td>2025-04-21 05:05:55.327<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386258918<br></td>
+<td><a href=?Action=23&msgId=33386258918 target="_self">33386258918</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS{¥¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649828688<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649828775<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386258918<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:23460<br></td>
+<td>40649828684<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:55.376<br></td>
+<td>2025-04-21 05:05:55.587<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386259060<br></td>
+<td><a href=?Action=23&msgId=33386259060 target="_self">33386259060</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySô¥¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649828824<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649828867<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386259060<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:17376<br></td>
+<td>40649828822<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:05:55.71<br></td>
+<td>2025-04-21 05:05:55.804<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386284755<br></td>
+<td><a href=?Action=23&msgId=33386284755 target="_self">33386284755</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySóé¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649862442<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649862451<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386284755<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:32884<br></td>
+<td>40649862441<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:07:35.962<br></td>
+<td>2025-04-21 05:07:35.981<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386284779<br></td>
+<td><a href=?Action=23&msgId=33386284779 target="_self">33386284779</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySê¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649862478<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649862551<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386284779<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:30500<br></td>
+<td>40649862473<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:07:36.034<br></td>
+<td>2025-04-21 05:07:36.222<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386284888<br></td>
+<td><a href=?Action=23&msgId=33386284888 target="_self">33386284888</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySXê¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649862607<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649862621<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386284888<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:17804<br></td>
+<td>40649862604<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:07:36.352<br></td>
+<td>2025-04-21 05:07:36.433<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386298924<br></td>
+<td><a href=?Action=23&msgId=33386298924 target="_self">33386298924</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySô ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649881332<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649881358<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386298924<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:59972<br></td>
+<td>40649881328<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:08:52.511<br></td>
+<td>2025-04-21 05:08:52.54<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386298968<br></td>
+<td><a href=?Action=23&msgId=33386298968 target="_self">33386298968</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649881391<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649881446<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386298968<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:12696<br></td>
+<td>40649881386<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:08:52.59<br></td>
+<td>2025-04-21 05:08:52.768<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386299043<br></td>
+<td><a href=?Action=23&msgId=33386299043 target="_self">33386299043</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySM ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649881486<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649881501<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386299043<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:34700<br></td>
+<td>40649881482<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:08:52.899<br></td>
+<td>2025-04-21 05:08:52.99<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386317389<br></td>
+<td><a href=?Action=23&msgId=33386317389 target="_self">33386317389</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySCI ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649905919<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649905927<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386317389<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:47008<br></td>
+<td>40649905918<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:15.942<br></td>
+<td>2025-04-21 05:10:15.968<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386317402<br></td>
+<td><a href=?Action=23&msgId=33386317402 target="_self">33386317402</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>5<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySLI ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>5<br></td>
+<td><br></td>
+<td>40649905937<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649905987<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386317402<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:48072<br></td>
+<td>40649905936<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:16.021<br></td>
+<td>2025-04-21 05:10:16.215<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386317457<br></td>
+<td><a href=?Action=23&msgId=33386317457 target="_self">33386317457</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySyI ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649906013<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649906036<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386317457<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:35256<br></td>
+<td>40649906012<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:16.325<br></td>
+<td>2025-04-21 05:10:16.43<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386317478<br></td>
+<td><a href=?Action=23&msgId=33386317478 target="_self">33386317478</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySI ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649906048<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649909874<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386317478<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:63960<br></td>
+<td>40649906047<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:16.476<br></td>
+<td>2025-04-21 05:10:28.756<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386320363<br></td>
+<td><a href=?Action=23&msgId=33386320363 target="_self">33386320363</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySDQ ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649909891<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649910496<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386320363<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:6556<br></td>
+<td>40649909890<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:28.814<br></td>
+<td>2025-04-21 05:10:31.233<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386324901<br></td>
+<td><a href=?Action=23&msgId=33386324901 target="_self">33386324901</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySI] ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649915875<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649916192<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386324901<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:43992<br></td>
+<td>40649915872<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:10:48.8<br></td>
+<td>2025-04-21 05:10:49.896<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386327368<br></td>
+<td><a href=?Action=23&msgId=33386327368 target="_self">33386327368</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySd ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40649919119<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649927125<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386327368<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:47008<br></td>
+<td>40649919118<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:11:01.884<br></td>
+<td>2025-04-21 05:11:23.099<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386348511<br></td>
+<td><a href=?Action=23&msgId=33386348511 target="_self">33386348511</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>10<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodyS ¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>10<br></td>
+<td><br></td>
+<td>40649946677<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40649946682<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386348511<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:55412<br></td>
+<td>40649946673<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:12:29.044<br></td>
+<td>2025-04-21 05:12:29.061<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386389069<br></td>
+<td><a href=?Action=23&msgId=33386389069 target="_self">33386389069</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>ШЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>60<br></td>
+<td><br></td>
+<td>0<br></td>
+<td>!^Ens.MessageBodySv!¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>60<br></td>
+<td><br></td>
+<td>40650000019<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40650000030<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.EGovSOAPRequest<br></td>
+<td>33386389069<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:28972<br></td>
+<td>40650000014<br></td>
+<td>2<br></td>
+<td>Запросы к ШЭП<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>ШЭП<br></td>
+<td>ШЭП<br></td>
+<td>2025-04-21 05:15:26.82<br></td>
+<td>2025-04-21 05:15:26.853<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386389095<br></td>
+<td><a href=?Action=23&msgId=33386389095 target="_self">33386389095</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td>!^Ens.MessageBodyS!¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>urn:updateApplicationNotification<br></td>
+<td>40650000060<br></td>
+<td>0<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=2 target="_self">2</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.NotificationRequest<br></td>
+<td>33386389095<br></td>
+<td>2<br></td>
+<td><br></td>
+<td><br></td>
+<td>40650000060<br></td>
+<td>1<br></td>
+<td>ARMMON_NOTIFICATION<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>SEND_NOTIFICATION<br></td>
+<td><br></td>
+<td>2025-04-21 05:15:26.942<br></td>
+<td>2025-04-21 05:15:27.08<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386389096<br></td>
+<td><a href=?Action=23&msgId=33386389096 target="_self">33386389096</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>Личный кабинет ПЭП<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td><br></td>
+<td>A.PC_PEP.IISCON_NOTIFICATION_RECEIVER_V2<br></td>
+<td>1<br></td>
+<td>!^Ens.MessageBodyS!¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>40650000079<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>40650000556<br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=1 target="_self">1</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.NotificationRequest<br></td>
+<td>33386389096<br></td>
+<td>2<br></td>
+<td><br></td>
+<td>_SyncCall:34064<br></td>
+<td>40650000079<br></td>
+<td>1<br></td>
+<td>PEP_NOTIFICATION<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>SHEP2_SYNC<br></td>
+<td>SHEP2_SYNC<br></td>
+<td>2025-04-21 05:15:26.994<br></td>
+<td>2025-04-21 05:15:29.063<br></td>
+<td>1<br></td>
+</tr>
+<tr>
+<td>33386389098<br></td>
+<td><a href=?Action=23&msgId=33386389098 target="_self">33386389098</a><br></td>
+<td><br></td>
+<td>002270550765<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td>!^Ens.MessageBodyS!¦%XML.GlobalCharacterStream^Ens.MessageBodyS<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>urn:changeApplicationStatusNotification<br></td>
+<td>40650000113<br></td>
+<td>0<br></td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+<td>1<br></td>
+<td><a href=UtilEnsMsgTrace.csp?$NAMESPACE=IISCON&&$ID1=2 target="_self">2</a><br></td>
+<td>0<br></td>
+<td>isc.kzcon.ens.msg.NotificationRequest<br></td>
+<td>33386389098<br></td>
+<td>2<br></td>
+<td><br></td>
+<td><br></td>
+<td>40650000113<br></td>
+<td>1<br></td>
+<td>ARMMON_NOTIFICATION<br></td>
+<td>9<br></td>
+<td><br></td>
+<td>3<br></td>
+<td>SEND_NOTIFICATION<br></td>
+<td><br></td>
+<td>2025-04-21 05:15:27.081<br></td>
+<td>2025-04-21 05:15:27.097<br></td>
+<td>1<br></td>
+</tr>
+</table>
+<br><b>Очередь уведомлений isc.kzcon.ens.MsgQueue</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>QueueName<br></td>
+<td>QueueType<br></td>
+<td>ApplicationId<br></td>
+<td>CreateDate<br></td>
+<td>CreateTime<br></td>
+<td>Initiator<br></td>
+<td>LastError<br></td>
+<td>EnsMsg<br></td>
+<td>EnsMsgClass<br></td>
+<td>SoapAction<br></td>
+<td>CurrentAttempt<br></td>
+<td>NextAttemptTime<br></td>
+<td>SendDateTime<br></td>
+<td>TimeRequest<br></td>
+<td>Info<br></td>
+<td>CreateDT<br></td>
+<td>EndPointUrl<br></td>
+<td>InfoSystemName<br></td>
+<td>ServiceTypeCode<br></td>
+<td>cleanerDate<br></td>
+</tr>
+<tr>
+<td>12476737014<br></td>
+<td>ARMMON<br></td>
+<td>1<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21<br></td>
+<td>05:02:50.900<br></td>
+<td>Регистрация и обновление<br></td>
+<td><br></td>
+<td><a href=?Action=23&msgId=33386213781 target="_self">33386213781</a><br></td>
+<td>NotificationRequest<br></td>
+<td>urn:registerApplicationNotification<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421 10:02:53<br></td>
+<td>.190441<br></td>
+<td><br></td>
+<td>2025-04-21 05:02:50.900<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>Z13-4<br></td>
+<td>2025-04-21<br></td>
+</tr>
+<tr>
+<td>12476737015<br></td>
+<td>PEP<br></td>
+<td>1<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21<br></td>
+<td>05:02:50.902<br></td>
+<td>Регистрация и обновление<br></td>
+<td><br></td>
+<td><a href=?Action=23&msgId=33386213782 target="_self">33386213782</a><br></td>
+<td>NotificationRequest<br></td>
+<td><br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421 10:02:50<br></td>
+<td>.028442<br></td>
+<td><br></td>
+<td>2025-04-21 05:02:50.902<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>Личный кабинет ПЭП<br></td>
+<td>Z13-4<br></td>
+<td>2025-04-21<br></td>
+</tr>
+<tr>
+<td>12476771188<br></td>
+<td>ARMMON<br></td>
+<td>1<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21<br></td>
+<td>05:15:26.926<br></td>
+<td>Регистрация и обновление<br></td>
+<td><br></td>
+<td><a href=?Action=23&msgId=33386389095 target="_self">33386389095</a><br></td>
+<td>NotificationRequest<br></td>
+<td>urn:updateApplicationNotification<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421 10:15:27<br></td>
+<td>.138861<br></td>
+<td><br></td>
+<td>2025-04-21 05:15:26.926<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>Z13-4<br></td>
+<td>2025-04-21<br></td>
+</tr>
+<tr>
+<td>12476771189<br></td>
+<td>PEP<br></td>
+<td>1<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21<br></td>
+<td>05:15:26.929<br></td>
+<td>Регистрация и обновление<br></td>
+<td><br></td>
+<td><a href=?Action=23&msgId=33386389096 target="_self">33386389096</a><br></td>
+<td>NotificationRequest<br></td>
+<td><br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421 10:15:29<br></td>
+<td>2.069992<br></td>
+<td><br></td>
+<td>2025-04-21 05:15:26.929<br></td>
+<td>http://shep2.egov.kz/bip-sync/<br></td>
+<td>Личный кабинет ПЭП<br></td>
+<td>Z13-4<br></td>
+<td>2025-04-21<br></td>
+</tr>
+<tr>
+<td>12476771190<br></td>
+<td>ARMMON<br></td>
+<td>1<br></td>
+<td><a href=?Action=4&appId=002270550765 target="_self">002270550765</a><br></td>
+<td>2025-04-21<br></td>
+<td>05:15:26.944<br></td>
+<td>Регистрация и обновление<br></td>
+<td><br></td>
+<td><a href=?Action=23&msgId=33386389098 target="_self">33386389098</a><br></td>
+<td>NotificationRequest<br></td>
+<td>urn:changeApplicationStatusNotification<br></td>
+<td>0<br></td>
+<td><br></td>
+<td>20250421 10:15:27<br></td>
+<td>.017059<br></td>
+<td>ACCEPTED<br></td>
+<td>2025-04-21 05:15:26.944<br></td>
+<td>http://mon.iiscon.kz/csp/mon/UT.Client.MON.UniversalService.cls<br></td>
+<td>АРМ Мониторинг<br></td>
+<td>Z13-4<br></td>
+<td>2025-04-21<br></td>
+</tr>
+</table>
+<br><b>Очередь гарантированного приема isc.kzcon.ens.EnsRequestQueue</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>QueueName<br></td>
+<td>QueueType<br></td>
+<td>ApplicationId<br></td>
+<td>CreateDate<br></td>
+<td>CreateTime<br></td>
+<td>CreateDT<br></td>
+<td>Initiator<br></td>
+<td>LastError<br></td>
+<td>EnsMsg<br></td>
+<td>EnsMsgClass<br></td>
+<td>CurrentAttempt<br></td>
+<td>NextAttemptTime<br></td>
+<td>SendDateTime<br></td>
+<td>TimeRequest<br></td>
+</tr>
+</table>
+<br><b>Очередь запросов Е-услуг isc.kzcon.ens.EServiceQueue</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>messageId<br></td>
+<td>applicationId<br></td>
+<td>typeCode<br></td>
+<td>status<br></td>
+<td>statusInfo<br></td>
+<td>forwardApplication<br></td>
+<td>sendRequest<br></td>
+<td>sendRequestResponse<br></td>
+<td>getStatus<br></td>
+<td>getStatusResponse<br></td>
+<td>isSync<br></td>
+<td>createDate<br></td>
+<td>createTime<br></td>
+<td>attempts<br></td>
+<td>waitPeriod<br></td>
+<td>nextAttemptTime<br></td>
+<td>timeSendRequest<br></td>
+<td>timeGetStatus<br></td>
+</tr>
+</table>
+<br><b>Чеки isc.kzcon.model.PaymentCheck</b>
+<table cellspacing="0" border-style="solid" border=1>
+<tr>
+<td>ID<br></td>
+<td>applicationId<br></td>
+<td>cleanerDate<br></td>
+<td>payerFIO<br></td>
+<td>payerIIN<br></td>
+<td>paymentCode<br></td>
+<td>sourceQueryEGovGate<br></td>
+<td>state<br></td>
+</tr>
+</table>
+<br><b>Тело SOAP-запроса RegisterApplication</b><br><textarea rows="5" style="width:100%" name="register"><registerApplication xmlns="http://schemas.letograf.kz/iiscon/bus/v1"><applicationId>002270550765</applicationId><applicationRegistrationData><registerId>002270550765</registerId><registerOrgCode>MJ-X-H-SC1</registerOrgCode><serviceTypeCode>Z13-4</serviceTypeCode><registerDate>2025-04-21T10:02:50.827+05:00</registerDate><registerEmployee><lastName>Кулмырзаева</lastName><firstName>Назипа</firstName><middleName>Рахымбердыкызы</middleName><position>Оператор ЦОН</position><iin>741215400606</iin></registerEmployee><smsCode>49</smsCode></applicationRegistrationData></registerApplication></textarea><br>
+<br><b>Тело SOAP-запроса UpdateApplication</b><br><textarea rows="10" style="width:100%" name="update">&lt;updateApplication xmlns=&quot;http://schemas.letograf.kz/iiscon/bus/v1&quot;&gt;&lt;applicationId&gt;002270550765&lt;/applicationId&gt;&lt;callOrigin&gt;&lt;orgCode&gt;MJ-X-H-SC1&lt;/orgCode&gt;&lt;employee&gt;&lt;lastName&gt;Кулмырзаева&lt;/lastName&gt;&lt;firstName&gt;Назипа&lt;/firstName&gt;&lt;middleName&gt;Рахымбердыкызы&lt;/middleName&gt;&lt;position&gt;Оператор ЦОН&lt;/position&gt;&lt;iin&gt;741215400606&lt;/iin&gt;&lt;/employee&gt;&lt;systemCode&gt;002&lt;/systemCode&gt;&lt;/callOrigin&gt;&lt;applicationData&gt;&lt;applicant&gt;&lt;person&gt;&lt;iin&gt;920530000084&lt;/iin&gt;&lt;lastName&gt;САЛИДДИНОВА&lt;/lastName&gt;&lt;firstName&gt;УГИЛОЙ&lt;/firstName&gt;&lt;middleName&gt;ЖАМАЛИДИН КИЗИ&lt;/middleName&gt;&lt;legalLocation&gt;&lt;areaCode&gt;1960&lt;/areaCode&gt;&lt;districtCode&gt;1960237&lt;/districtCode&gt;&lt;countryName&gt;КАЗАХСТАН&lt;/countryName&gt;&lt;cityName&gt;Жартытобинский, Достык&lt;/cityName&gt;&lt;streetName&gt;УЛИЦА М.Жумабаев&lt;/streetName&gt;&lt;building&gt;&lt;dom&gt;8&lt;/dom&gt;&lt;corpus/&gt;&lt;/building&gt;&lt;apartment/&gt;&lt;/legalLocation&gt;&lt;actualLocation&gt;&lt;areaCode&gt;1960&lt;/areaCode&gt;&lt;districtCode&gt;1960237&lt;/districtCode&gt;&lt;countryName&gt;КАЗАХСТАН&lt;/countryName&gt;&lt;cityName&gt;Жартытобинский, Достык&lt;/cityName&gt;&lt;streetName&gt;УЛИЦА М.Жумабаев&lt;/streetName&gt;&lt;building&gt;&lt;dom&gt;8&lt;/dom&gt;&lt;corpus/&gt;&lt;/building&gt;&lt;apartment/&gt;&lt;/actualLocation&gt;&lt;contacts&gt;&lt;contact&gt;&lt;contactType&gt;CELL_PHONE&lt;/contactType&gt;&lt;contactData&gt;7 (776) 747-06-92&lt;/contactData&gt;&lt;contactPrefix/&gt;&lt;isForNotification&gt;false&lt;/isForNotification&gt;&lt;/contact&gt;&lt;/contacts&gt;&lt;identityDocument&gt;&lt;docType&gt;IDENTITY_CARD&lt;/docType&gt;&lt;docSer/&gt;&lt;docNum&gt;043988851&lt;/docNum&gt;&lt;docDate&gt;2019-01-30+05:00&lt;/docDate&gt;&lt;docSource&gt;МВД РК&lt;/docSource&gt;&lt;expirationDate&gt;2029-01-29+05:00&lt;/expirationDate&gt;&lt;docName&gt;Удостоверение личности РК&lt;/docName&gt;&lt;/identityDocument&gt;&lt;dateOfBirth&gt;1992-05-30+05:00&lt;/dateOfBirth&gt;&lt;placeOfBirth&gt;УЗБЕКИСТАН ЗАГРАНИЦА ЗАГРАНИЦА&lt;/placeOfBirth&gt;&lt;gender&gt;F&lt;/gender&gt;&lt;isForeigner&gt;false&lt;/isForeigner&gt;&lt;citizenship&gt;398&lt;/citizenship&gt;&lt;/person&gt;&lt;/applicant&gt;&lt;executorOrgCode&gt;ADM-X-H-EMPZM1&lt;/executorOrgCode&gt;&lt;deliveryOrgCode&gt;MJ-X-H-SC1&lt;/deliveryOrgCode&gt;&lt;deadline&gt;2025-04-25T23:59:59.082+05:00&lt;/deadline&gt;&lt;cost&gt;0.0&lt;/cost&gt;&lt;payments&gt;&lt;payment&gt;&lt;paymentId&gt;52669327291&lt;/paymentId&gt;&lt;cost&gt;0.0&lt;/cost&gt;&lt;paymentType&gt;BVU&lt;/paymentType&gt;&lt;/payment&gt;&lt;/payments&gt;&lt;copies&gt;1&lt;/copies&gt;&lt;language&gt;RUS&lt;/language&gt;&lt;finalDocumentLang&gt;RUS&lt;/finalDocumentLang&gt;&lt;documents&gt;&lt;document&gt;&lt;documentId&gt;f4fcf160-e246-413d-a61c-1d2a8ab7bbdc&lt;/documentId&gt;&lt;docTypeCode&gt;Z355&lt;/docTypeCode&gt;&lt;copyType&gt;ELECTRONIC&lt;/copyType&gt;&lt;docName&gt;Заявление установленной формы о выдаче повторного свидетельства о регистрации актов гражданского состояния&lt;/docName&gt;&lt;documentBinary&gt;&lt;url&gt;http://unisod.iiscon:8082/csp/iiscon/isc.kzcon.query.DocStorage.cls?action=getDocBinary&amp;amp;documentId=f4fcf160-e246-413d-a61c-1d2a8ab7bbdc&amp;amp;convertMode=BINARY&lt;/url&gt;&lt;mimeType&gt;application/pdf&lt;/mimeType&gt;&lt;signature&gt;-----BEGIN CMS-----
+MIIG2gYJKoZIhvcNAQcCoIIGyzCCBscCAQExDjAMBggqgw4DCgEDAQUAMC8GCSqG
+SIb3DQEHAaAiBCA0YjgxZDU1NmE4ZmFlNjEwNDMxYzVmZTdjMDc4YjAzMqCCBQMw
+ggT/MIIEqaADAgECAhRFhPH4niCXjsQYY5Z9Fu66yVP+9jANBgkqgw4DCgEBAQIF
+ADBTMQswCQYDVQQGEwJLWjFEMEIGA1UEAww70rDQm9Ci0KLQq9KaINCa0KPTmNCb
+0JDQndCU0KvQoNCj0KjQqyDQntCg0KLQkNCb0KvSmiAoR09TVCkwHhcNMjIwNzE4
+MDMzODQxWhcNMjUwNjAxMDMzODQxWjCCAbExHzAdBgNVBAQMFtCa0KPQm9Cc0KvQ
+oNCX0JDQldCS0JAxLDAqBgNVBAMMI9Ca0KPQm9Cc0KvQoNCX0JDQldCS0JAg0J3Q
+kNCX0JjQn9CQMRgwFgYDVQQFEw9JSU43NDEyMTU0MDA2MDYxCzAJBgNVBAYTAkta
+MRgwFgYDVQQLDA9CSU4xODA1NDEwMDMyOTAxJTAjBgNVBCoMHNCg0JDQpdCr0JzQ
+kdCV0KDQlNCr0JrQq9CX0KsxgfcwgfQGA1UECgyB7NCk0JjQm9CY0JDQmyDQndCV
+0JrQntCc0JzQldCg0KfQldCh0JrQntCT0J4g0JDQmtCm0JjQntCd0JXQoNCd0J7Q
+k9CeINCe0JHQqdCV0KHQotCS0JAgItCT0J7QodCj0JTQkNCg0KHQotCS0JXQndCd
+0JDQryDQmtCe0KDQn9Ce0KDQkNCm0JjQryAi0J/QoNCQ0JLQmNCi0JXQm9Cs0KHQ
+otCS0J4g0JTQm9CvINCT0KDQkNCW0JTQkNCdIiDQn9CeINCi0KPQoNCa0JXQodCi
+0JDQndCh0JrQntCZINCe0JHQm9CQ0KHQotCYMGwwJQYJKoMOAwoBAQEBMBgGCiqD
+DgMKAQEBAQEGCiqDDgMKAQMBAQADQwAEQBDkNCDTwg2Xv8OR+sP1e1m/Lgawv9wE
+pToZ5tbR2T8CigItz6BoEBrlqg2BHQ3l65Lp2Hq+7L2xa7pzrVWkzYWjggHjMIIB
+3zAOBgNVHQ8BAf8EBAMCBsAwKAYDVR0lBCEwHwYIKwYBBQUHAwQGCCqDDgMDBAEC
+Bgkqgw4DAwQBAgUwDwYDVR0jBAgwBoAEW2pz6TAVBgNVHQ4EDgQMXp5H5bPMhoTo
+Pw8rMF4GA1UdIARXMFUwUwYHKoMOAwMCATBIMCEGCCsGAQUFBwIBFhVodHRwOi8v
+cGtpLmdvdi5rei9jcHMwIwYIKwYBBQUHAgIwFwwVaHR0cDovL3BraS5nb3Yua3ov
+Y3BzMFgGA1UdHwRRME8wTaBLoEmGImh0dHA6Ly9jcmwucGtpLmdvdi5rei9uY2Ff
+Z29zdC5jcmyGI2h0dHA6Ly9jcmwxLnBraS5nb3Yua3ovbmNhX2dvc3QuY3JsMFwG
+A1UdLgRVMFMwUaBPoE2GJGh0dHA6Ly9jcmwucGtpLmdvdi5rei9uY2FfZF9nb3N0
+LmNybIYlaHR0cDovL2NybDEucGtpLmdvdi5rei9uY2FfZF9nb3N0LmNybDBjBggr
+BgEFBQcBAQRXMFUwLwYIKwYBBQUHMAKGI2h0dHA6Ly9wa2kuZ292Lmt6L2NlcnQv
+bmNhX2dvc3QuY2VyMCIGCCsGAQUFBzABhhZodHRwOi8vb2NzcC5wa2kuZ292Lmt6
+MA0GCSqDDgMKAQEBAgUAA0EAZA+qvTEeHF6nU/JqRsWA/gMxgoN/gIBGDpXLeuoV
+OBOgTqhP0fFoutiV6siOXMABpzo6Y4h/lsYRfJBNc4LPtTGCAXgwggF0AgEBMGsw
+UzELMAkGA1UEBhMCS1oxRDBCBgNVBAMMO9Kw0JvQotCi0KvSmiDQmtCj05jQm9CQ
+0J3QlNCr0KDQo9Co0Ksg0J7QoNCi0JDQm9Cr0pogKEdPU1QpAhRFhPH4niCXjsQY
+Y5Z9Fu66yVP+9jAMBggqgw4DCgEDAQUAoIGiMBgGCSqGSIb3DQEJAzELBgkqhkiG
+9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTI1MDQyMTA1MTM0MlowLwYJKoZIhvcNAQkE
+MSIEIMv7sLQ61OxCaxRFcNz1NifQxZ5uJswgYMyepyYX4KIMMDcGCyqGSIb3DQEJ
+EAIvMSgwJjAkMCIEIOJjwb7aqtoeHh4e7THHLFp3dtfSZCNVF3eKs9z2TO6rMA0G
+CSqDDgMKAQEBAgUABECyrdcY4PoUaCK0bO8vHZe31liYi67zW63TbrNUv32B9J5A
+XRxjOBpaFMtEQqYnoD/3pnH6q+GNtMqpCDdv4TSN
+-----END CMS-----
+&lt;/signature&gt;&lt;/documentBinary&gt;&lt;applicant&gt;&lt;person&gt;&lt;iin&gt;920530000084&lt;/iin&gt;&lt;/person&gt;&lt;/applicant&gt;&lt;/document&gt;&lt;/documents&gt;&lt;data&gt;&lt;digiSign&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&amp;lt;application&amp;gt;
+	&amp;lt;applicationId&amp;gt;002270550765&amp;lt;/applicationId&amp;gt;
+	&amp;lt;serviceTypeCode&amp;gt;Z13-4&amp;lt;/serviceTypeCode&amp;gt;
+	&amp;lt;registerOrgCode&amp;gt;MJ-X-H-SC1&amp;lt;/registerOrgCode&amp;gt;
+	&amp;lt;executorOrgCode&amp;gt;ADM-X-H-EMPZM1&amp;lt;/executorOrgCode&amp;gt;
+	&amp;lt;smsCode&amp;gt;49&amp;lt;/smsCode&amp;gt;
+&amp;lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&amp;gt;
+&amp;lt;ds:SignedInfo&amp;gt;
+&amp;lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/&amp;gt;
+&amp;lt;ds:SignatureMethod Algorithm=&quot;urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34102015-gostr34112015-512&quot;/&amp;gt;
+&amp;lt;ds:Reference URI=&quot;&quot;&amp;gt;
+&amp;lt;ds:Transforms&amp;gt;
+&amp;lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/&amp;gt;
+&amp;lt;ds:Transform Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments&quot;/&amp;gt;
+&amp;lt;/ds:Transforms&amp;gt;
+&amp;lt;ds:DigestMethod Algorithm=&quot;urn:ietf:params:xml:ns:pkigovkz:xmlsec:algorithms:gostr34112015-512&quot;/&amp;gt;
+&amp;lt;ds:DigestValue&amp;gt;WwFGpJKjfNExlF9oUKhX9F0T8GnKZJKKF3soJYrzjbqcc44MZVhky3FXIBYM6K4/QAMPLFypBIXd
+2CUAcQ6mVg==&amp;lt;/ds:DigestValue&amp;gt;
+&amp;lt;/ds:Reference&amp;gt;
+&amp;lt;/ds:SignedInfo&amp;gt;
+&amp;lt;ds:SignatureValue&amp;gt;
+UwCfianglXdMEDlhjnHj8GBH0G7m9Tg4VNzDH8y5QsSg9KwmhUZtxkCsoMHihVlSzBbV4gDcrd2p
+gJWzxTMTiOfG5Us0klGNeaUJlfF52F5dLqmLIfE84+v4VnqQGGgW7m6VmnTZhPa08g3jh/hXxV1B
+tEdNDQmH0MVezVULHY8=
+&amp;lt;/ds:SignatureValue&amp;gt;
+&amp;lt;ds:KeyInfo&amp;gt;
+&amp;lt;ds:X509Data&amp;gt;
+&amp;lt;ds:X509Certificate&amp;gt;
+MIIFSjCCBLKgAwIBAgIUNbq+Pa7yAe4GgyxydTSIqZQA6QwwDgYKKoMOAwoBAQIDAgUAMFgxSTBH
+BgNVBAMMQNKw0JvQotCi0KvSmiDQmtCj05jQm9CQ0J3QlNCr0KDQo9Co0Ksg0J7QoNCi0JDQm9Cr
+0pogKEdPU1QpIDIwMjIxCzAJBgNVBAYTAktaMB4XDTI0MTIyNTExMzEyN1oXDTI3MTIyNTExMzEy
+N1owggGwMSYwJAYKCZImiZPyLGQBAQwWMS4yLjM5OC4zLjMuNC4xLjIuNi45ODGBoTCBngYDVQQD
+DIGW0JjQvdGC0LXQs9GA0LjRgNC+0LLQsNC90L3QsNGPINC40L3RhNC+0YDQvNCw0YbQuNC+0L3Q
+vdCw0Y8g0YHQuNGB0YLQtdC80LAg0LTQu9GPINCm0LXQvdGC0YDQvtCyINC+0LHRgdC70YPQttC4
+0LLQsNC90LjRjyDQvdCw0YHQtdC70LXQvdC40Y8gaWlzY29uLmt6MQswCQYDVQQGEwJLWjGBujCB
+twYDVQQKDIGv0J3QtdC60L7QvNC80LXRgNGH0LXRgdC60L7QtSDQsNC60YbQuNC+0L3QtdGA0L3Q
+vtC1INC+0LHRidC10YHRgtCy0L4gwqvQk9C+0YHRg9C00LDRgNGB0YLQstC10L3QvdCw0Y8g0LrQ
+vtGA0L/QvtGA0LDRhtC40Y8gwqvQn9GA0LDQstC40YLQtdC70YzRgdGC0LLQviDQtNC70Y8g0LPR
+gNCw0LbQtNCw0L3CuzEYMBYGA1UECwwPQklOMTYwNDQwMDA3MTYxMIGsMCMGCSqDDgMKAQECAjAW
+Bgoqgw4DCgEBAgIBBggqgw4DCgEDAwOBhAAEgYBaxnMRT5N/4PDx3GILq7x/3kg4F/wAC6kJaYwL
+wLcNsqS2krHPOjibMe3yRvaqHAW7Xvb949YfIjmQpz0yh3CM461EXOZgSUe7IGlZwAMUIlkHJmYw
+YS3n+IJj8Ryy/64sL8/zu0W1iNk6W/ThJHgzSvXowwgIwvvBei0Dne43hqOCAaYwggGiMA4GA1Ud
+DwEB/wQEAwIDyDAeBgNVHSUEFzAVBggqgw4DAwQBAgYJKoMOAwMEAQIGMDgGA1UdIAQxMC8wLQYG
+KoMOAwMCMCMwIQYIKwYBBQUHAgEWFWh0dHA6Ly9wa2kuZ292Lmt6L2NwczA4BgNVHR8EMTAvMC2g
+K6AphidodHRwOi8vY3JsLnBraS5nb3Yua3ovbmNhX2dvc3RfMjAyMi5jcmwwOgYDVR0uBDMwMTAv
+oC2gK4YpaHR0cDovL2NybC5wa2kuZ292Lmt6L25jYV9kX2dvc3RfMjAyMi5jcmwwaAYIKwYBBQUH
+AQEEXDBaMCIGCCsGAQUFBzABhhZodHRwOi8vb2NzcC5wa2kuZ292Lmt6MDQGCCsGAQUFBzAChiho
+dHRwOi8vcGtpLmdvdi5rei9jZXJ0L25jYV9nb3N0XzIwMjIuY2VyMB0GA1UdDgQWBBQ1ur49rvIB
+7gaDLHJ1NIiplADpDDAfBgNVHSMEGDAWgBT+ML6fyJBjPx//WjwMsMhfTG0XCDAWBgYqgw4DAwUE
+DDAKBggqgw4DAwUBATAOBgoqgw4DCgEBAgMCBQADgYEANXzpuGg7Nxd4P/aPtHl0ZVSgyXax2FxA
+7BonlZOk2DSg7mu8aB/fuZ0ZTYfW4LhphYp/NTn082nIAe84nvY43BuTl1DXM/2FEXXxB+XFr4bL
+5lG+eFKAgE98RzNSEqebKuPGvsO4eEVqb5ZM7zOQfWO8jIBx7vRTVHcl18V6+cs=
+&amp;lt;/ds:X509Certificate&amp;gt;
+&amp;lt;/ds:X509Data&amp;gt;
+&amp;lt;/ds:KeyInfo&amp;gt;
+&amp;lt;/ds:Signature&amp;gt;&amp;lt;/application&amp;gt;&lt;/digiSign&gt;&lt;/data&gt;&lt;applicationAttrs&gt;&lt;attr&gt;&lt;name&gt;note&lt;/name&gt;&lt;value/&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;eQueueRegTicket&lt;/name&gt;&lt;value&gt;0025&lt;/value&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;eQueueRegToken&lt;/name&gt;&lt;value&gt;659376918&lt;/value&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;eQueueRegWaitTime&lt;/name&gt;&lt;value&gt;12&lt;/value&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;eQueueRegProcTime&lt;/name&gt;&lt;value&gt;12&lt;/value&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;eQueueRegPriority&lt;/name&gt;&lt;value&gt;0&lt;/value&gt;&lt;/attr&gt;&lt;attr&gt;&lt;name&gt;resultDeliveryPlace&lt;/name&gt;&lt;value&gt;SC&lt;/value&gt;&lt;/attr&gt;&lt;/applicationAttrs&gt;&lt;/applicationData&gt;&lt;/updateApplication&gt;</textarea><br>
+</div>
+			
+ 
+			<!-- Подвал страницы-->
+			<hr/>
+		</body>
+		</html>
+	
